@@ -29,7 +29,7 @@
 body {
     background-color: var(--mantle);
     width: auto;
-    font-family: 'Fira Code';
+    font-family: 'Fira Code', monospace;
     display: flex;
     flex-direction: column;
     color: var(--text);
