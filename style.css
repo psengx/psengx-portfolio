@@ -1,0 +1,629 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --crust: #11111B;
+    --mantle: #181825;
+    --base: #1e1e2e;
+    --surface0: #313244;
+    --surface2: #585b70;
+    --text: #cdd6f4;
+    --subtext1: #bac2de;
+    --lavender: #b4befe;
+    --blue: #89b4fa;
+    --teal: #94e2d5;
+    --green: #a6e3a1;
+    --yellow: #f9e2af;
+    --peach: #fab387;
+    --maroon: #eba0ac;
+    --red: #f38ba8;
+    --mauve: #cba6f7;
+    --pink: #f5c2e7;
+    --flamingo: #f2cdcd;
+    --rosewater: #f5e0dc;
+}
+
+body {
+    background-color: var(--mantle);
+    width: auto;
+    font-family: 'Fira Code';
+    display: flex;
+    flex-direction: column;
+    color: var(--text);
+}
+
+header {
+    background-color: var(--crust);
+    height: 88px;
+    width: 100%;
+    color: var(--text);
+    font-size: 29px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.header-title {
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+    align-items: center;
+    height: min-content;
+    margin: 0px 30px 0px 30px;
+}
+
+main {
+    width: auto;
+    margin: 40px;
+}
+
+.main {
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+}
+
+.photos {
+    gap: 5px;
+    width: 100%;
+    max-width: 411px;
+    display: flex;
+    flex-flow: column;
+}
+
+.main-info {
+    margin: 30px 30px;
+    height: auto;
+}
+
+.name {
+    margin-bottom: 15px;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.contacts {
+    display: flex;
+    gap: 55px;
+    color: var(--surface2);
+    font-size: 20px;
+}
+
+.contact {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact svg {
+    color: var(--yellow);
+    width: 35px;
+    height: 35px;
+}
+
+a {
+    color: var(--yellow);
+    text-decoration: none;
+    transition: .2s;
+}
+
+a:hover {
+    color: var(--lavender);
+}
+
+.block-title {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: var(--lavender);
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.about {
+    color: var(--text);
+    font-size: 26px;
+    height: auto;
+    font-size: 21px;
+    line-height: 1.8;
+    max-width: 1020px
+}
+
+.section {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#with-photo {
+    display: flex;
+    gap: 20px;
+    align-content: stretch;
+    max-height: 670px;
+}
+
+.gallery {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 28px;
+}
+
+.gallery img {
+    max-height: 50%;
+}
+
+.card {
+    background: var(--base);
+    border: 2px solid var(--surface0);
+    padding: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    color: var(--teal);
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 1.8;
+    color: var(--subtext1);
+}
+
+.card span {
+    color: var(--surface2);
+}
+
+.card ul {
+    margin-top: 18px;
+    padding-left: 22px;
+}
+
+.card li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    color: var(--subtext1);
+}
+
+.stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.stack span {
+    background: var(--surface0);
+    color: var(--mauve);
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.skills {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 22px;
+}
+
+.skill-group {
+    background: var(--base);
+    height: 230px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+}
+
+.skill-group h3 {
+    color: var(--mauve);
+    margin-bottom: 18px;
+    font-size: 22px;
+}
+
+.skill-group span {
+
+    display: inline-block;
+    margin: 5px;
+    padding: 7px 12px;
+    background: var(--surface0);
+    border-radius: 8px;
+    color: var(--teal);
+    font-size: 15px;
+}
+
+footer {
+    background-color: var(--crust);
+    height: 88px;
+    width: 100%;
+    color: var(--text);
+    font-size: 29px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+footer h3 {
+    color: var(--surface2)
+}
+
+/* =======================
+   <= 1200px
+======================= */
+@media (max-width:1200px) {
+
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photos {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .photos img {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-info {
+        margin: 0;
+    }
+
+    .about {
+        max-width: 100%;
+    }
+
+    #with-photo {
+        flex-direction: column;
+    }
+
+    .gallery {
+        justify-content: center;
+    }
+
+    .gallery img {
+        width: 100%;
+        max-width: 500px;
+        max-height: none;
+    }
+
+    .card p[style] {
+        width: auto !important;
+    }
+}
+
+
+/* =======================
+   <= 992px
+======================= */
+@media (max-width:992px) {
+
+    header,
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header-title {
+        margin: 0;
+    }
+
+    .contacts {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .section {
+        flex-direction: column !important;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-group {
+        height: auto;
+    }
+
+    .name {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .block-title {
+        text-align: center;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    main {
+        margin: 20px 15px;
+    }
+
+    /* ---------------- Header ---------------- */
+
+    header,
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        height: auto;
+        padding: 20px 15px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .header-title {
+        margin: 0;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .header-title svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* ---------------- Главный блок ---------------- */
+
+    .main {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* скрываем все фотографии */
+
+    .gallery,
+    #with-photo>img {
+        display: none;
+    }
+
+    .photos {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .photos img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+    #add-photo {
+        display: none;
+    }
+    .photos>div {
+        display: flex !important;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .photos>div img {
+        max-width: 135px;
+    }
+
+    #with-photo {
+        display: block;
+        height: auto !important;
+    }
+
+    /* ---------------- Текст ---------------- */
+
+    .main-info {
+        margin: 0;
+        width: 100%;
+    }
+
+    .name {
+        font-size: 30px;
+        line-height: 1.3;
+        word-break: break-word;
+    }
+
+    .about {
+        max-width: 100%;
+        font-size: 17px;
+        line-height: 1.7;
+        word-break: break-word;
+    }
+
+    .block-title {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    /* ---------------- Контакты ---------------- */
+
+    .contacts {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        font-size: 16px;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    .contact svg {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    .contact a {
+        overflow-wrap: anywhere;
+    }
+
+    /* ---------------- Секции ---------------- */
+
+    .section {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    /* ---------------- Карточки ---------------- */
+
+    .card {
+        width: 100% !important;
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    .card h3 {
+        font-size: 20px;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    .card p {
+        width: 100% !important;
+        font-size: 16px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    .card li {
+        font-size: 16px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
+    .card a {
+        display: block;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    /* ---------------- Стек технологий ---------------- */
+
+    .stack {
+        gap: 8px;
+    }
+
+    .stack span {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    /* ---------------- Навыки ---------------- */
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-group {
+        height: auto;
+        padding: 20px;
+    }
+
+    .skill-group h3 {
+        font-size: 20px;
+    }
+
+    .skill-group span {
+        font-size: 13px;
+    }
+
+    /* ---------------- Любые изображения ---------------- */
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+/* =======================
+   <= 480px
+======================= */
+@media (max-width:480px) {
+
+    main {
+        margin: 15px;
+    }
+
+    header,
+    footer {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .header-title {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .block-title {
+        font-size: 24px;
+    }
+
+    .about {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p,
+    .card li {
+        font-size: 15px;
+    }
+
+    .stack {
+        gap: 6px;
+    }
+
+    .stack span {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .contact svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .contacts {
+        font-size: 16px;
+    }
+
+}
