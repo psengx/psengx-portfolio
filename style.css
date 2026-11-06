@@ -53,6 +53,7 @@ header {
     flex-flow: row;
     gap: 20px;
     align-items: center;
+    flex-wrap: nowrap;
     height: min-content;
     margin: 0px 30px 0px 30px;
 }
@@ -117,7 +118,7 @@ a:hover {
 }
 
 .block-title {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 10px;
     color: var(--lavender);
     font-size: 36px;
@@ -133,29 +134,10 @@ a:hover {
     max-width: 1020px
 }
 
-.section {
-    margin-top: 15px;
+.edu section {
     display: flex;
     justify-content: space-between;
-}
-
-#with-photo {
-    display: flex;
-    gap: 20px;
-    align-content: stretch;
-    max-height: 670px;
-}
-
-.gallery {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    flex-wrap: wrap;
-    display: flex;
-    gap: 28px;
-}
-
-.gallery img {
-    max-height: 50%;
+    gap: 2%;
 }
 
 .card {
@@ -202,12 +184,39 @@ a:hover {
     margin: 18px 0;
 }
 
+.project-photo summary {
+    list-style: none;
+    text-decoration: underline;
+    color:#f38ba8;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.project-photo img {
+    width: 100%;
+    border: 1px solid var(--pink);
+}
+
+.project-photo div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.project-photo div img {
+    height: fit-content;
+    border: 1px solid var(--pink);
+}
+
 .stack span {
     background: var(--surface0);
     color: var(--mauve);
-    padding: 8px 14px;
-    border-radius: 10px;
+    padding: 9px 12px;
+    border-radius: 3px;
     font-size: 15px;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
 }
 
 .skills {
@@ -219,27 +228,28 @@ a:hover {
 
 .skill-group {
     background: var(--base);
-    height: 230px;
-    border: 1px solid var(--border);
-    border-radius: 18px;
+    height: auto;
+    border: 2px solid var(--surface0);
     padding: 24px;
 }
 
 .skill-group h3 {
     color: var(--mauve);
-    margin-bottom: 18px;
+    margin-bottom: 10px;
     font-size: 22px;
 }
 
 .skill-group span {
-
     display: inline-block;
     margin: 5px;
-    padding: 7px 12px;
+    padding: 9px 12px;
     background: var(--surface0);
-    border-radius: 8px;
+    border-radius: 5px;
     color: var(--teal);
     font-size: 15px;
+
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
 }
 
 footer {
@@ -288,20 +298,6 @@ footer h3 {
         max-width: 100%;
     }
 
-    #with-photo {
-        flex-direction: column;
-    }
-
-    .gallery {
-        justify-content: center;
-    }
-
-    .gallery img {
-        width: 100%;
-        max-width: 500px;
-        max-height: none;
-    }
-
     .card p[style] {
         width: auto !important;
     }
@@ -332,10 +328,9 @@ footer h3 {
         justify-content: center;
     }
 
-    .section {
-        flex-direction: column !important;
+    .edu section {
+        flex-direction: column;
     }
-
     .skills {
         grid-template-columns: 1fr;
     }
@@ -359,7 +354,6 @@ footer h3 {
    Mobile
 =========================== */
 @media (max-width: 768px) {
-
     body {
         overflow-x: hidden;
     }
@@ -367,8 +361,6 @@ footer h3 {
     main {
         margin: 20px 15px;
     }
-
-    /* ---------------- Header ---------------- */
 
     header,
     footer {
@@ -393,18 +385,9 @@ footer h3 {
         height: 28px;
     }
 
-    /* ---------------- Главный блок ---------------- */
-
     .main {
         flex-direction: column;
         gap: 0;
-    }
-
-    /* скрываем все фотографии */
-
-    .gallery,
-    #with-photo>img {
-        display: none;
     }
 
     .photos {
@@ -431,13 +414,6 @@ footer h3 {
         max-width: 135px;
     }
 
-    #with-photo {
-        display: block;
-        height: auto !important;
-    }
-
-    /* ---------------- Текст ---------------- */
-
     .main-info {
         margin: 0;
         width: 100%;
@@ -461,8 +437,6 @@ footer h3 {
         margin-top: 20px;
     }
 
-    /* ---------------- Контакты ---------------- */
-
     .contacts {
         flex-direction: column;
         gap: 15px;
@@ -483,15 +457,6 @@ footer h3 {
     .contact a {
         overflow-wrap: anywhere;
     }
-
-    /* ---------------- Секции ---------------- */
-
-    .section {
-        flex-direction: column !important;
-        gap: 20px;
-    }
-
-    /* ---------------- Карточки ---------------- */
 
     .card {
         width: 100% !important;
@@ -524,8 +489,6 @@ footer h3 {
         word-break: break-word;
     }
 
-    /* ---------------- Стек технологий ---------------- */
-
     .stack {
         gap: 8px;
     }
@@ -534,8 +497,6 @@ footer h3 {
         font-size: 13px;
         padding: 6px 10px;
     }
-
-    /* ---------------- Навыки ---------------- */
 
     .skills {
         grid-template-columns: 1fr;
@@ -553,9 +514,6 @@ footer h3 {
     .skill-group span {
         font-size: 13px;
     }
-
-    /* ---------------- Любые изображения ---------------- */
-
     img {
         max-width: 100%;
         height: auto;
@@ -576,9 +534,6 @@ footer h3 {
     footer {
         padding: 15px;
         font-size: 16px;
-    }
-
-    .header-title {
         flex-direction: column;
         gap: 8px;
     }
