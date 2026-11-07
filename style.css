@@ -197,11 +197,24 @@ a:hover {
     border: 1px solid var(--pink);
 }
 
-.project-photo div {
+.photo-gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: space-between;
+}
+
+.photo-gallery img {
+    object-fit: contain;
+    height: auto;
+    max-width: 100%;
+}
+
+.photo-gallery img:first-child {
+    width: 100%;
+}
+
+.photo-gallery img:not(:first-child) {
+    width: calc(50% - 5px);
 }
 
 .project-photo div img {
